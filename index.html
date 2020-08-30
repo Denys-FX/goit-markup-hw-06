@@ -401,39 +401,54 @@
                     <path d="M21 10.1079L19.8921 9L15.5 13.3921L11.1079 9L10 10.1079L14.3921 14.5L10 18.8921L11.1079 20L15.5 15.6079L19.8921 20L21 18.8921L16.6079 14.5L21 10.1079Z" fill="black"/>
                 </svg>
            </div>
-           
-            <div>
-                <form action="#" method="POST">
-                    <label>
-                        Message
-                        <input type="text" name="message" placeholder="enter your message">
-                    </label>
-                </form>
-            </div>
-            <div role="group">
-                <p>Выберите цвет футболки:</p>
-              
-                <label for="color-1">Красный</label>
-                <input id="color-1" name="color" type="radio" value="red" checked />
-              
-                <label for="color-2">Белый</label>
-                <input id="color-2" name="color" type="radio" value="white" />
-              
-                <label for="color-3">Зелёный</label>
-                <input id="color-3" name="color" type="radio" value="green" />
-              </div>
-              <div>
-                <label for="age">Возраст</label>
-                <input id="age" type="range" name="age" min="0" max="120" value="0" />
-              </div>
-              <div>
-                <label for="color">Цвет</label>
-
-                <input id="color" name="color" type="color" />
-              </div>
-           </button>
+           <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form action="#" method="POST">
+                <div class="input-field">
+                    <label class="label" for="name">Имя</label>
+                    <input class="input" type="text" name="name" id="name" autocomplete="off" autofocus>
+                </div>
+                <div class="input-field">
+                    <label class="label" for="tel">Телефон</label>
+                    <input class="input" type="tel" name="tel" id="tel" autocomplete="off">
+                </div>
+                <div class="input-field">
+                    <label class="label" for="email">Почта</label>
+                    <input class="input" type="email" name="email" id="email" autocomplete="off">
+                </div>
+                <div class="input-field">
+                    <label class="label" for="comments">Комментарий</label>
+                    <textarea class="input textarea" 
+                    name="comments"
+                    id="comments" 
+                    cols="30" 
+                    rows="5"
+                    placeholder="Введите текст">
+                </textarea>
+                <div class="input-checkbox">
+                    <input class="input" type="checkbox" name="checkbox" id="checkbox">
+                    <label class="label" for="email">Соглашаюсь с рассылкой и принимаю 
+                        <span>
+                        <a class="agreement-link" href="#">Условия договора</a>
+                        </span>
+                    </label>               
+                </div>
+                <button class="form-button" type="submit">Отправить</button>
+            </form>
        </div>
    </div>
+   <script>
+       (() => {
+        document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+            );
+        });
+        })();
+   </script>
    <script src="./js/modal.js"></script>
 </body>
 </html>
