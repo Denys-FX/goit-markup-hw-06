@@ -234,7 +234,7 @@ h1,h2,h3,h4,h5,h6 {
     display:inline-block;
     width: 200px;
     height: 50px;
-    padding: 10px 32px;
+    padding: 10px 30px;
 
     border: 1px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -246,10 +246,6 @@ h1,h2,h3,h4,h5,h6 {
     line-height: 1.875;
     letter-spacing: 0.06em;
     border-radius: 4px;
-}
-
-.button.hero {
-    min-width: 203px;
 }
 
 /*Section "Advantages" styling*/
@@ -712,21 +708,25 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .button.subscribe {
-    display: inline-block;
+    display: inline-flex;
     margin-left: 12px;
+    padding: 10px 27px;
 }
 
 .button.subscribe::after {
     display: inline-block;
     
-    content: '';
-    width: 20px;
-    height: 20px;
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
     background: url(../images/icon-send.svg);
-    outline: 1px solid tomato;
-    background-color: tomato;
-}
 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
 
 .backdrop {
     position: fixed;
