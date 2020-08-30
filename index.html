@@ -56,7 +56,7 @@
             <section class="hero-container">
                 <div class="hero-section">
                     <H1 class="hero-title">Эффективные решения для вашего бизнеса</H1>
-                    <button class="link button hero" data-modal-open>Заказать услугу</button>
+                    <button class="button hero" data-modal-open>Заказать услугу</button>
                 </div>             
             </section>
          </div>
@@ -387,6 +387,14 @@
                         </li>
                     </ul>
                 </section>
+                <section class="section-subscribe">
+                    <form action="#" method="POST">
+                        <p class="join-text">Подпишитесь на рассылку</p>
+                        <input class="input-mail" type="email" name="email" id="email" placeholder="E-mail" autocomplete="off">
+                        <button class="button subscribe" type="submit">Подписаться</button>
+                    </form>
+                </section>
+
             </div>
         </footer>
     </div>
@@ -418,12 +426,12 @@
                 <div class="input-field">
                     <label class="label" for="comments">Комментарий</label>
                     <textarea class="input textarea" 
-                    name="comments"
-                    id="comments" 
-                    cols="30" 
-                    rows="5"
-                    placeholder="Введите текст">
-                </textarea>
+                        name="comments"
+                        id="comments" 
+                        cols="30" 
+                        rows="5"
+                        placeholder="Введите текст">
+                    </textarea>
                 <div class="input-checkbox">
                     <input class="input" type="checkbox" name="checkbox" id="checkbox">
                     <label class="label" for="email">Соглашаюсь с рассылкой и принимаю 
@@ -432,10 +440,11 @@
                         </span>
                     </label>               
                 </div>
-                <button class="form-button" type="submit">Отправить</button>
+                <button class="button form" type="submit">Отправить</button>
             </form>
        </div>
    </div>
+   <!--Scrip from Repeta, to send submitted form via button type="submit" to nowhere:)-->
    <script>
        (() => {
         document
@@ -449,6 +458,7 @@
         });
         })();
    </script>
+   <!--Script for opening modal window via button placed at "Hero"-->
    <script src="./js/modal.js"></script>
 </body>
 </html>

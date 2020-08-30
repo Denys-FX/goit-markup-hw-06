@@ -48,11 +48,6 @@ h1,h2,h3,h4,h5,h6 {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link.button {
-    color: var(--text-color-accent2);
-    background-color: var(--background-color-accent);
-}
-
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-contacts .link:hover,
@@ -234,21 +229,28 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-.button.hero {
+
+.button {
     display:inline-block;
-    min-width: 200px;
+    width: 200px;
     height: 50px;
     padding: 10px 32px;
 
     border: 1px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: var(--text-color-accent2);
+    background-color: var(--background-color-accent);
     
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.06em;
     border-radius: 4px;
-   }
+}
+
+.button.hero {
+    min-width: 203px;
+}
 
 /*Section "Advantages" styling*/
 .advantages-container {
@@ -663,7 +665,8 @@ h1,h2,h3,h4,h5,h6 {
     margin-left: 70px;
 }
 
-.join-text, .signup-text {
+.join-text, 
+.signup-text {
     margin-top:0;
     margin-bottom: 20px;
     padding: 0;
@@ -685,6 +688,45 @@ h1,h2,h3,h4,h5,h6 {
 .social-link-footer:hover {
     background-color: var(--background-color-accent)
 }
+
+.section-subscribe {
+    display: inline-block;
+
+    max-width: 575px;
+    height: 86px;
+    padding-top: 72px;
+    padding-bottom: 94px;
+    margin-left: auto;
+
+}
+
+.input-mail {
+    width: 358px ;
+    height: 50px;
+    padding: 15px 16px;
+
+    background-color: var(--background-color-footer) ;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.button.subscribe {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.button.subscribe::after {
+    display: inline-block;
+    
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(../images/icon-send.svg);
+    outline: 1px solid tomato;
+    background-color: tomato;
+}
+
 
 .backdrop {
     position: fixed;
@@ -800,15 +842,15 @@ h1,h2,h3,h4,h5,h6 {
     height: 16px;
     width: 15px;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 8.4px;
+    margin: 0;
+
+    background-color: var(--text-color-main);
 }
 
 .input-checkbox .label {
     padding: 0;
-    margin:0;
+    margin-left: 8.4px;
+    margin-bottom: 0;
 
     font-weight: normal;
     font-size: 14px;
@@ -820,25 +862,9 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--text-color-accent);
 }
 
-.form-button {
-    width: 200px;
-    height: 50px;
+.button.form {
     margin-left: auto;
     margin-right: auto;
-
-    background: var(--background-color-accent);
-    border-radius: 4px;
-    border: 1px transparent;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    
-
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-
-    color: var(--text-color-accent2);
 }
 
 /*Portfolio page styling*/
