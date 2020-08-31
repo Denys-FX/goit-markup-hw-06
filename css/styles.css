@@ -693,7 +693,6 @@ h1,h2,h3,h4,h5,h6 {
     padding-top: 72px;
     padding-bottom: 94px;
     margin-left: auto;
-
 }
 
 .input-mail {
@@ -765,7 +764,14 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0;
     
     background-color: var(--background-color-main);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
+
+.btn-close:hover .icon-close,
+.btn-close:focus .icon-close {
+    fill: var(--link-color-active);
+}
+
 .form-title {
     width: 448px;
     margin-bottom: 12px;
@@ -779,6 +785,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .input-field {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -798,13 +806,41 @@ h1,h2,h3,h4,h5,h6 {
 
 .input {
     height: 40px;
-    padding: 12px 15px;
+   
+    padding-left: 42px;
+    scroll-padding-right: 15px;
     margin-bottom: 10px;
-
+    
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
+
+.input-icon {
+    position: absolute;
+    top: 57%;
+    left: 15px;
+
+    display: inline-block;
+
+    transform: translateY(-50%);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-field:hover .input,
+.input-field:focus .input {
+    border: 1px solid var(--text-color-accent);
+}
+
+.input-field:hover .field-icon,
+.input-field:focus .field-icon {
+    fill: var(--background-color-accent);
+}
+
 
 .input-field .textarea {
     margin-bottom: 25px;
