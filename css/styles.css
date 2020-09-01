@@ -794,6 +794,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .label {
+    display: inline-block;
+
     margin-bottom: 4px;
 
     color: var(--text-color-secondary);
@@ -830,6 +832,7 @@ h1,h2,h3,h4,h5,h6 {
     transform: translateY(-50%);
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .input-field:hover .input,
 .input-field:focus .input {
@@ -884,9 +887,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .input-checkbox .label {
-    padding: 0;
-    margin-left: 8.4px;
-    margin-bottom: 0;
+    position: relative;
+
+    display: block;
+
+    padding-left: 24.4px;
+    
 
     font-weight: normal;
     font-size: 14px;
@@ -894,8 +900,39 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.03em;
 }
 
+.checkbox {
+    -webkit-appearance: none;  
+}
+
 .agreement-link {
     color: var(--text-color-accent);
+}
+
+.check-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    content: '';
+    width: 16px;
+    height: 15px;
+
+    border: 1.5px solid var(--text-color-main);
+    border-radius: 2px;
+}
+
+.checkbox:checked + .check-icon {
+    background-color: var(--text-color-accent);
+    border: 1.5px transparent var(--text-color-main);
+}
+
+.cheked-icon {
+    display: block;
 }
 
 .button.form {
